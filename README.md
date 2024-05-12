@@ -17,9 +17,9 @@ To run this game on your local machine, follow these steps:
    git clone https://github.com/lytv0511/rock-paper-scissors.git
    
 
-2. **Navigate** to the cloned directory:
+2. **Navigate** to the cloned directory (ensure that you are in the directory that you have cloned the project to):
    ```bash
-   cd rock-paper-scissors-swift
+   cd rock-paper-scissors
    ```
 
 3. **Open** the project in Xcode:
@@ -27,4 +27,4 @@ To run this game on your local machine, follow these steps:
    open RockPaperScissors.xcodeproj
    ```
 
-4. **Build** and **run** the project in Xcode to start playing!
+4. **Build** and **run** the project in Xcode to start playing! (you may choose to use **Simulator** or run it on your **iPhone** or **iPad** in **developer mode**
