@@ -14,7 +14,7 @@ To run this game on your local machine, follow these steps:
 
 1. **Clone** the repository to your local machine using the terminal command:
    ```bash
-   git clone [https://github.com/yourusername/rock-paper-scissors-swift.git](https://github.com/lytv0511/rock-paper-scissors.git)
+   git clone https://github.com/lytv0511/rock-paper-scissors.git
    
 
 2. **Navigate** to the cloned directory:
