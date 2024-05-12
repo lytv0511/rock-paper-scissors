@@ -9,5 +9,22 @@ Welcome to the repository for our Rock Paper Scissors game, a classic hand game 
 - **SwiftUI**: Built using the latest SwiftUI framework for a smooth experience.
 
 ## Installation
+
 To run this game on your local machine, follow these steps:
-1. Clone the repository to your local machine using the terminal command:
+
+1. **Clone** the repository to your local machine using the terminal command:
+   ```bash
+   git clone [https://github.com/yourusername/rock-paper-scissors-swift.git](https://github.com/lytv0511/rock-paper-scissors.git)
+   
+
+2. **Navigate** to the cloned directory:
+   ```bash
+   cd rock-paper-scissors-swift
+   ```
+
+3. **Open** the project in Xcode:
+   ```bash
+   open RockPaperScissors.xcodeproj
+   ```
+
+4. **Build** and **run** the project in Xcode to start playing!
