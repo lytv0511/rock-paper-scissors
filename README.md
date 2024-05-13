@@ -27,4 +27,4 @@ To run this game on your local machine, follow these steps:
    open RockPaperScissors.xcodeproj
    ```
 
-4. **Build** and **run** the project in Xcode to start playing! (you may choose to use **Simulator** or run it on your **iPhone** or **iPad** in **developer mode**
+4. **Build** and **run** the project in Xcode to start playing! (you may choose to use **Simulator** or run it on your **iPhone** or **iPad** in **developer mode** (you have to trust the developer in Settings first)
