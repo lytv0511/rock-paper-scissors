@@ -81,7 +81,7 @@ let choices = ["r", "p", "s"]
                         }
                         .padding()
                     } .pickerStyle(.palette)
-                    Text("Your choice is '\(choice.capitalized)'")
+//                    Text("Your choice is '\(choice.capitalized)'")
                 } header: {
                     Text("Enter 'r' for rock, 'p' for paper, or 's' for scissors")
                 }
