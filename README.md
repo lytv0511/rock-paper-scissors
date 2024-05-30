@@ -11,7 +11,7 @@ Welcome to the repository for our Rock Paper Scissors game, a classic hand game 
 ## Updates
 - **Jogwheel**: Use a jogwheel to easily select your choice and play with only your thumb
 - **Animations**: New winning, losing, and tie animations, all to make gameplay that bit more engaging
-- **Clean interface**: The new interface is as clean as ever, great to kill time or take a break from work
+- **Decluttered interface**: The new interface is as clean as ever, great to kill time or take a break from work
 
 ## Installation
 
