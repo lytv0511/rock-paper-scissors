@@ -1,12 +1,17 @@
 # Rock Paper Scissors Game in Swift
 
 ## Overview
-Welcome to the repository for our Rock Paper Scissors game, a classic hand game that is usually played between two people, where each player simultaneously forms one of three shapes with an outstretched hand. This version is built with Swift and is designed to be simple, and fun to play. To play the game, place a bet using the bet button and press "Play", winning will award you with the amount of points that you bet, and vice versa. Tap the arrow button to toggle the visualizer.
+Welcome to the repository for our Rock Paper Scissors game, a classic hand game that is usually played between two people, where each player simultaneously forms one of three shapes with an outstretched hand. This version is built with Swift and is designed to be simple, and fun to play. To play the game, place a bet using the bet button, then rotate the jogwheel to select between rock, paper, and scissors, press "Play" to start the game. Winning will award you with the amount of points that you bet, and vice versa. 
 
 ## Features
-- **Play against the computer**: Test your luck and strategy by playing against the AI.
+- **Play against the computer**: Test your luck and strategy by playing against the computer.
 - **Simple UI**: A straightforward user interface for easy gameplay.
 - **SwiftUI**: Built using the latest SwiftUI framework for a smooth experience.
+
+## Updates
+- **Jogwheel**: Use a jogwheel to easily select your choice and play with only your thumb
+- **Animations**: New winning, losing, and tie animations, all to make gameplay that bit more engaging
+- **Clean interface**: The new interface is as clean as ever, great to kill time or take a break from work
 
 ## Installation
 
