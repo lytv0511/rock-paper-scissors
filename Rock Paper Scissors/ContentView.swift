@@ -77,7 +77,7 @@ struct ContentView: View {
     @State private var pw = ""
     @State private var tapCount = 0
     @State private var gameOutput = "Rock-Paper-Scissors Game!"
-    @State private var bet = 0
+    @State private var bet = 1
     @State private var points = 0
     @State private var computerChoice = ""
     @State private var showDetail = false
@@ -94,7 +94,7 @@ struct ContentView: View {
             //                    Form {
             Spacer()
                 .frame(height: 10)
-            Stepper("Bet: \(bet)", value: $bet, in: 0...Int.max)
+            Stepper("Bet: \(bet)", value: $bet, in: 1...Int.max)
                 .padding()
             
             
