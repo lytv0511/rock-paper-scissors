@@ -1,77 +1,12 @@
+//
+//  ContentView.swift
+//  Rock Paper Scissors
+//
+//  Created by Vincent Leong on 5/31/24.
+//
+
 import SwiftUI
 
-// WheelPicker view definition
-struct WheelPicker: View {
-    let choices: [String]
-    @Binding var choice: String
-    @State private var rotation: Double = 0
-    @State private var finalAngle: Double = 0
-    @State private var initialTouchAngle: Double? = nil
-    let numberOfTicks = 100
-    
-    var body: some View {
-        VStack {
-            GeometryReader { geometry in
-                ZStack {
-                    Circle()
-                        .stroke(lineWidth: 1)
-                        .foregroundColor(.gray)
-                    
-                    ForEach(0..<numberOfTicks, id: \.self) { index in
-                        Rectangle()
-                            .frame(width: 2, height: index % 5 == 0 ? 20 : 10)
-                            .offset(y: -geometry.size.width/2 + 15 + (index % 5 == 0 ? -5 : 0))
-                            .rotationEffect(Angle(degrees: 360 / Double(numberOfTicks) * Double(index)))
-                    }
-                    ForEach(0..<choices.count, id: \.self) { index in
-                        Text(self.choices[index])
-                            .offset(y: -geometry.size.width/2 + 50)
-                            .rotationEffect(Angle(degrees: 360 / Double(choices.count) * Double(index)))
-                            .rotationEffect(Angle(degrees: self.finalAngle), anchor: .center)
-                            .font(.title)
-                    }
-                }
-                
-                .contentShape(Circle())
-                .clipped()
-                .frame(width: geometry.size.width, height: geometry.size.width)
-                .rotationEffect(Angle(degrees: self.rotation))
-                .gesture(
-                    DragGesture()
-                        .onChanged { value in
-                            let vector = CGVector(dx: value.location.x - geometry.size.width / 2,
-                                                  dy: value.location.y - geometry.size.height / 2)
-                            let angle = atan2(vector.dy, vector.dx).radiansToDegrees
-                            if self.initialTouchAngle == nil {
-                                self.initialTouchAngle = angle
-                            }
-                            self.rotation = angle - (self.initialTouchAngle ?? 0)
-                        }
-                        .onEnded { _ in
-                            self.finalAngle += self.rotation
-                            self.rotation = 0
-                            self.initialTouchAngle = nil
-                            // Normalize the final angle to be within 0 to 360 degrees
-                            let normalizedAngle = (360 - self.finalAngle.truncatingRemainder(dividingBy: 360)) + 360 / Double(choices.count) / 2
-                            // Calculate the index of the top element
-                            let index = Int((normalizedAngle / (360 / Double(choices.count))).truncatingRemainder(dividingBy: Double(choices.count)))
-                            self.choice = self.choices[index]
-                        }
-                )
-            }
-            .aspectRatio(1, contentMode: .fit)
-            .padding(.horizontal)
-        }
-    }
-}
-
-extension CGFloat {
-    var radiansToDegrees: Double {
-        return Double(self) * 180 / .pi
-    }
-}
-
-// ContentView with integrated WheelPicker
 struct ContentView: View {
     @State private var choice = ""
     @State private var pw = ""
@@ -90,44 +25,10 @@ struct ContentView: View {
     var body: some View {
         
         VStack {
-            //                            Section {
-            //                    Form {
             Spacer()
                 .frame(height: 10)
             Stepper("Bet: \(bet)", value: $bet, in: 1...Int.max)
                 .padding()
-            
-            
-            //                        Button{
-            //                            withAnimation {
-            //                                showDetail.toggle()
-            //                            }
-            //                        } label: {
-            //                            Label("Graph", systemImage: "chevron.right.circle")
-            //                                .labelStyle(.iconOnly)
-            //                                .imageScale(.large)
-            //                                .rotationEffect(.degrees(showDetail ? 90 : 0))
-            //                                .scaleEffect(showDetail ? 1.5 : 1)
-            //                                .frame(maxWidth: .infinity, alignment: .center)
-            //                                .padding()
-            //
-            //                        }
-            //                        if showDetail {
-            //                            Section {
-            //                                Button("Bet x 10"){
-            //                                    bet += 10
-            //                                }
-            //                                Button("Hold back x 10"){
-            //                                    if bet >= 10 {
-            //                                        bet -= 10
-            //                                    }
-            //                                }
-            //                                Button("Reset"){
-            //                                    bet = 0
-            //                                }
-            //                            }
-            //                        }
-            //                    }
             HStack {
                 if(started == true) {
                 Text(emojiForChoice(choice: computerChoice))
@@ -169,7 +70,6 @@ struct ContentView: View {
                 Button("Play") {
                     playRockPaperScissors()
                     started = true
-                    // Reset animations after 1 second
                     if computerAnimationAmount > 1.0 {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                             withAnimation {
@@ -185,9 +85,9 @@ struct ContentView: View {
                         }
                     }
                 }
-                .padding(20) // Add padding to increase the tappable area
-                .contentShape(Rectangle()) // Define the tappable area shape, Rectangle by default
-                .background(Color.blue) // Set a background so you can see the button area
+                .padding(20)
+                .contentShape(Rectangle())
+                .background(Color.blue)
                 .foregroundColor(.white)
                 .cornerRadius(10)
 
@@ -204,13 +104,6 @@ struct ContentView: View {
             gameOutput = "Your choice: \(player)\n" +
             "Computer's choice: \(computer)\n" +
             result
-            
-            // Reset animation amounts
-//            playerAnimationAmount = 1.0
-//            computerAnimationAmount = 1.0
-        
-            
-            // Animate the winner
             if result == "You win" {
                 playerAnimationAmount = 1.4
             } else if result == "Computer wins" {

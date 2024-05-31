@@ -16,6 +16,7 @@
 		153E888F2BF1061400BEB9EF /* Rock_Paper_ScissorsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153E888E2BF1061400BEB9EF /* Rock_Paper_ScissorsUITests.swift */; };
 		153E88912BF1061400BEB9EF /* Rock_Paper_ScissorsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153E88902BF1061400BEB9EF /* Rock_Paper_ScissorsUITestsLaunchTests.swift */; };
 		15425C822BFCA3AA008ED008 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 15425C812BFCA3A9008ED008 /* README.md */; };
+		1592234E2C09C71700E4812F /* WheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1592234D2C09C71700E4812F /* WheelPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		153E888E2BF1061400BEB9EF /* Rock_Paper_ScissorsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rock_Paper_ScissorsUITests.swift; sourceTree = "<group>"; };
 		153E88902BF1061400BEB9EF /* Rock_Paper_ScissorsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rock_Paper_ScissorsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		15425C812BFCA3A9008ED008 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1592234D2C09C71700E4812F /* WheelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				153E88712BF1061200BEB9EF /* Rock_Paper_ScissorsApp.swift */,
 				153E88732BF1061200BEB9EF /* ContentView.swift */,
+				1592234D2C09C71700E4812F /* WheelPicker.swift */,
 				153E88752BF1061200BEB9EF /* Item.swift */,
 				153E88772BF1061400BEB9EF /* Assets.xcassets */,
 				153E88792BF1061400BEB9EF /* Preview Content */,
@@ -267,6 +270,7 @@
 				153E88742BF1061200BEB9EF /* ContentView.swift in Sources */,
 				153E88762BF1061200BEB9EF /* Item.swift in Sources */,
 				153E88722BF1061200BEB9EF /* Rock_Paper_ScissorsApp.swift in Sources */,
+				1592234E2C09C71700E4812F /* WheelPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
