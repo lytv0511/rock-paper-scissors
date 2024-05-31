@@ -9,13 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var choice = ""
-    @State private var pw = ""
-    @State private var tapCount = 0
     @State private var gameOutput = "Rock-Paper-Scissors Game!"
     @State private var bet = 1
     @State private var points = 0
     @State private var computerChoice = ""
-    @State private var showDetail = false
     @State private var playerAnimationAmount: CGFloat = 1.0
     @State private var computerAnimationAmount:CGFloat = 1.0
     @State private var started = false
