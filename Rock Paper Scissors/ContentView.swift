@@ -60,6 +60,7 @@ struct ContentView: View {
                     }
             }
             Text("Points: \(points)")
+//            Text(gameOutput)
             ZStack {
                 WheelPicker(choices: choices, choice: $choice)
                     .edgesIgnoringSafeArea(.bottom)
